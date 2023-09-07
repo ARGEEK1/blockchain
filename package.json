@@ -1,0 +1,21 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blockchain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node build/blockchain.js"
+  },
+  "keywords": [],
+  "author": "ARGEEK1",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.2",
+    "@types/node": "^20.5.9",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
