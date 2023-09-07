@@ -1,6 +1,7 @@
 import { Block } from "./Block";
+import { BlockchainInterface } from "../interfaces/blockchain.interface";
 
-export class Blockchain {
+export class Blockchain implements BlockchainInterface {
   chain: Block[];
   difficulty: string;
 
@@ -20,7 +21,7 @@ export class Blockchain {
 
   addBlock(data: string): void {
     let prevBlock: Block = this.getLastBlock();
-    let block: Block = new Block(prevBlock.index, data, prevBlock.hash);
+    let block: Block = new Block(prevBlock.index + 1, data, prevBlock.hash);
     block.mine(this.difficulty);
     console.log(`Minado! ${block.hash} con nonce: ${block.nonce}`);
     this.chain.push(block);
